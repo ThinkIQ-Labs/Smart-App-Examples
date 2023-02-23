@@ -17,7 +17,7 @@ Microsoft has included multiple weather api's with their Maps geospatial service
 - Pro: current weather data includes dew point and wet bulb
 - Con: no historical weather data
 
-OpenWeatherMap - Current Weather and Forecast
+### OpenWeatherMap - Current Weather and Forecast
 OpenWeatherMap is a dedicated data service that includes a number of api's focusing exclusively on weather and climate conditions and forecasting. We use the endpoint featuring current weather data, which is documented here. To use the service, you will need to create an account and obtain an api key, which is needed to configure the Weather Station equipment type included in the Weather Station Library.
 
 Pro: there is an endpoint for hourly historical weather data
