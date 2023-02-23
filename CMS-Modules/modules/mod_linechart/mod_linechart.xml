@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>Line Chart</name>
+	<author>ThinkIQ Inc</author>
+	<authorEmail>thinkiq@thinkiq.com</authorEmail>
+	<authorUrl>http://thinkiq.com</authorUrl>
+	<creationDate>October 2021</creationDate>
+	<copyright>Copyright © 2020 ThinkIQ Inc, all rights reserved.</copyright>
+	<license>see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>MOD_LINECHART_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_linechart">mod_linechart.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.mod_linechart.ini</language>
+		<language tag="en-GB">en-GB.mod_linechart.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+            <fieldset name="basic" addfieldpath="administrator/components/com_thinkiq/models/fields">
+                <field name="attribute_ids"
+                       data-display-mode="instance"
+                       data-prune-branches="false"
+                       data-branch-types="organization,place,equipment,gateway,connector,opcua_object,object,material,person"
+                       data-leaf-types="attribute"
+                       data-visible-tabs='home,general,properties'
+                       data-allow-modify="false"
+                       data-default-expand-levels="1"
+                       data-default-root-node-id="null"
+                       data-height="500"
+                       data-show-controls="false"
+                       data-properties-selection-mode="multiple"
+                       data-scripts-selection-mode="none"
+                       data-selection-count-max="5"
+                       type="modelbrowser"
+                       description="Attribute Ids(s)"
+                       label="Attribute Ids(s)"
+                       required="false"
+                >
+                </field>
+				<field
+						name="start_date"
+						type="calendar"
+						showtime="true"
+						format="%Y-%m-%d %H:%M:%S"
+						label="MOD_LINECHART_START_DATE_LABEL"
+						description="MOD_LINECHART_START_DATE_DESC"
+						rows="3"
+				>
+				</field>
+				<field
+						name="end_date"
+						type="calendar"
+						showtime="true"
+						format="%Y-%m-%d %H:%M:%S"
+						label="MOD_LINECHART_END_DATE_LABEL"
+						description="MOD_LINECHART_END_DATE_DESC"
+						rows="3"
+				>
+				</field>
+				<field
+						name="title"
+						type="text"
+						label="MOD_LINECHART_TITLE_LABEL"
+						description="MOD_LINECHART_TITLE_DESC"
+						rows="3"
+				>
+				</field>
+				<field
+						name="max_num_of_points"
+						type="text"
+						label="MOD_LINECHART_MAX_NUM_OF_POINTS_LABEL"
+						description="MOD_LINECHART_MAX_NUM_OF_POINTS_DESC"
+						default="500"
+						filter="integer"
+				>
+				</field>
+				<field
+						name="height"
+						type="text"
+						label="MOD_LINECHART_HEIGHT_LABEL"
+						description="MOD_LINECHART_HEIGHT_DESC"
+						default="400"
+						filter="integer"
+				>
+				</field>
+				<field
+						name="show_error"
+						type="radio"
+						label="MOD_LINECHART_SHOW_ERROR_LABEL"
+						description="MOD_LINECHART_SHOW_ERROR_DESC"
+						default="false"
+				>
+					<option value="true">YES</option>
+					<option value="false">NO</option>
+				</field>
+				<field
+						name="loader_mode"
+						type="radio"
+						label="MOD_LINECHART_LOADER_MODE_LABEL"
+						description="MOD_LINECHART_LOADER_MODE_DESC"
+						default="Small"
+				>
+					<option value="Regular">Regular</option>
+					<option value="Small">Small</option>
+					<option value="Off">Off</option>
+				</field>
+				<field
+						name="display_mode_bar"
+						type="radio"
+						label="MOD_LINECHART_DISPLAY_MODE_BAR_LABEL"
+						description="MOD_LINECHART_DISPLAY_MODE_BAR_DESC"
+						default="false"
+				>
+					<option value="true">YES</option>
+					<option value="false">NO</option>
+				</field>
+				<field
+						name="display_duration_picker"
+						type="checkbox"
+						label="MOD_LINECHART_DISPLAY_DURATION_PICKER_LABEL"
+						description="MOD_LINECHART_DISPLAY_DURATION_PICKER_DESC"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

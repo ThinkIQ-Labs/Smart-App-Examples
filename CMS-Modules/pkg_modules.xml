@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="1.6" method="upgrade">
+    <name>Modules Package</name>
+    <author>ThinkIQ Inc</author>
+    <creationDate>October 2021</creationDate>
+    <packagename>modules</packagename>
+    <version>1.0.0</version>
+    <url>http://thinkiq.com</url>
+    <packager>ThinkIQ Inc</packager>
+    <packagerurl>http://thinkiq.com</packagerurl>
+    <description>Modules package to combine multiple module extensions</description>
+    <update>http://www.updateurl.com/update</update>
+    <!--scriptfile>modules_script.php</scriptfile-->
+    <files folder="modules">
+        <file type="module" id="mod_linechart" client="site">mod_linechart.zip</file>
+        <file type="module" id="mod_currentvalue" client="site">mod_currentvalue.zip</file>
+    </files>
+</extension>

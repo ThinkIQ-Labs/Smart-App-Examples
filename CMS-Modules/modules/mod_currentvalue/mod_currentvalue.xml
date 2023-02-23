@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>Current Value</name>
+	<author>ThinkIQ Inc</author>
+	<authorEmail>thinkiq@thinkiq.com</authorEmail>
+	<authorUrl>http://thinkiq.com</authorUrl>
+	<creationDate>October 2021</creationDate>
+	<copyright>Copyright © 2020 ThinkIQ Inc, all rights reserved.</copyright>
+	<license>see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>MOD_CURRENTVALUE_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_currentvalue">mod_currentvalue.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.mod_currentvalue.ini</language>
+		<language tag="en-GB">en-GB.mod_currentvalue.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+            <fieldset name="basic" addfieldpath="administrator/components/com_thinkiq/models/fields">
+                <field
+                    data-display-mode="instance"
+                    data-prune-branches="false"
+                    data-branch-types="organization,place,equipment,gateway,connector,opcua_object,object,material,person"
+                    data-leaf-types="attribute, tag"
+                    data-allow-modify="false"
+                    data-default-expand-levels="1"
+                    data-default-root-node-id="null"
+                    data-height="300"
+                    data-show-controls="false"
+                    data-properties-selection-mode="single"
+                    data-scripts-selection-mode="single"
+                    data-selection-count-max="1"
+                    name="attribute_id"
+                    type="modelbrowser"
+                    label="MOD_CURRENTVALUE_ATTRIBUTE_ID_LABEL"
+                    description="MOD_CURRENTVALUE_ATTRIBUTE_ID_DESC"
+                />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
